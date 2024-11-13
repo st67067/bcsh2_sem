@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\least\\Desktop\\5 BCSH2 - Programování v .NET a C#II\\RideWise\\RideWise\\RideWise\\RideWise.csproj": {}
+    "C:\\Users\\least\\Desktop\\5 BCSH2 - Programování v .NET a C#II\\RideWise_semestral\\RideWise\\RideWise\\RideWise.csproj": {}
   },
   "projects": {
-    "C:\\Users\\least\\Desktop\\5 BCSH2 - Programování v .NET a C#II\\RideWise\\RideWise\\RideWise\\RideWise.csproj": {
+    "C:\\Users\\least\\Desktop\\5 BCSH2 - Programování v .NET a C#II\\RideWise_semestral\\RideWise\\RideWise\\RideWise.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\least\\Desktop\\5 BCSH2 - Programování v .NET a C#II\\RideWise\\RideWise\\RideWise\\RideWise.csproj",
+        "projectUniqueName": "C:\\Users\\least\\Desktop\\5 BCSH2 - Programování v .NET a C#II\\RideWise_semestral\\RideWise\\RideWise\\RideWise.csproj",
         "projectName": "RideWise",
-        "projectPath": "C:\\Users\\least\\Desktop\\5 BCSH2 - Programování v .NET a C#II\\RideWise\\RideWise\\RideWise\\RideWise.csproj",
+        "projectPath": "C:\\Users\\least\\Desktop\\5 BCSH2 - Programování v .NET a C#II\\RideWise_semestral\\RideWise\\RideWise\\RideWise.csproj",
         "packagesPath": "C:\\Users\\least\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\least\\Desktop\\5 BCSH2 - Programování v .NET a C#II\\RideWise\\RideWise\\RideWise\\obj\\",
+        "outputPath": "C:\\Users\\least\\Desktop\\5 BCSH2 - Programování v .NET a C#II\\RideWise_semestral\\RideWise\\RideWise\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\least\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,6 +45,12 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "CommunityToolkit.Mvvm": {
+              "target": "Package",
+              "version": "[8.3.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

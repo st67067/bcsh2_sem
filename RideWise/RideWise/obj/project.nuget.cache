@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "LR5P6umGHwc=",
+  "dgSpecHash": "KoK3k5iziwI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\least\\Desktop\\5 BCSH2 - Programování v .NET a C#II\\RideWise\\RideWise\\RideWise\\RideWise.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\least\\Desktop\\5 BCSH2 - Programování v .NET a C#II\\RideWise_semestral\\RideWise\\RideWise\\RideWise.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\least\\.nuget\\packages\\communitytoolkit.mvvm\\8.3.2\\communitytoolkit.mvvm.8.3.2.nupkg.sha512"
+  ],
   "logs": []
 }

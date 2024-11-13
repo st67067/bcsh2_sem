@@ -1,4 +1,5 @@
 is_global = true
+build_property.MvvmToolkitEnableINotifyPropertyChangingSupport = true
 build_property.TargetFramework = net8.0-windows
 build_property.TargetPlatformMinVersion = 7.0
 build_property.UsingMicrosoftNETSdkWeb = 
@@ -8,6 +9,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = RideWise
-build_property.ProjectDir = C:\Users\least\Desktop\5 BCSH2 - Programování v .NET a C#II\RideWise\RideWise\RideWise\
+build_property.ProjectDir = C:\Users\least\Desktop\5 BCSH2 - Programování v .NET a C#II\RideWise_semestral\RideWise\RideWise\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
