@@ -9,8 +9,19 @@ namespace RideWise.Model
     public class RentRecords
     {
 
-        public Car Car { get; set; }
-        public User User { get; set; }
+        public string CarPlate { get; set; }
+        public string Username { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
 
+        public RentRecords() { }
+
+        public RentRecords(string car, string user, DateTime startTime, DateTime endTime)
+        {
+            CarPlate = car;
+            Username = user;
+            StartTime = startTime;
+            EndTime = endTime;
+        }
     }
 }

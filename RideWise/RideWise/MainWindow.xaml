@@ -41,7 +41,7 @@
             </Button>
 
             <!-- Account Icon -->
-            <TextBlock x:Name="accountIcon" FontFamily="Segoe MDL2 Assets" Text="&#xE156;" FontSize="16" Margin="5">
+            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE156;" FontSize="16" Margin="5">
                 <TextBlock.Style>
                     <Style TargetType="TextBlock">
                         <Setter Property="Visibility" Value="Collapsed"/>
@@ -55,7 +55,8 @@
             </TextBlock>
 
             <!-- Account Button -->
-            <Button x:Name="accountBtn" Content="Account" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" Margin="5,0,0,0">
+            <Button Content="Account" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" Margin="5,0,0,0"
+                    Command="{Binding ShowUserInfoCommand}">
                 <Button.Style>
                     <Style TargetType="Button">
                         <Setter Property="Visibility" Value="Collapsed"/>
@@ -68,27 +69,33 @@
                 </Button.Style>
             </Button>
         </StackPanel>
-        
-        
-        <ListBox Grid.Row="1" ItemsSource="{Binding Cars}" SelectedItem="{Binding SelectedCar}">
+
+
+        <ListBox Grid.Row="1" ItemsSource="{Binding Cars}" SelectedItem="{Binding SelectedCar}" 
+         HorizontalContentAlignment="Stretch">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel Orientation="Vertical">
-                        <TextBlock Text="{Binding Brand, StringFormat='Brand: {0}'}" />
-                        <TextBlock Text="{Binding Type, StringFormat='Model: {0}'}" />
-                        <TextBlock Text="{Binding Price, StringFormat='Price: {0:C}'}" />
-                        <Separator></Separator>
-                    </StackPanel>
+                    <Button Command="{Binding DataContext.ShowCarDetailsCommand, RelativeSource={RelativeSource AncestorType=ListBox}}"
+                    CommandParameter="{Binding}"
+                    Background="Transparent" BorderThickness="0"
+                    HorizontalAlignment="Stretch">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="{Binding Brand, StringFormat='Brand: {0}'}" TextAlignment="Left" />
+                            <TextBlock Text="{Binding Type, StringFormat='Model: {0}'}" TextAlignment="Left" />
+                            <TextBlock Text="{Binding Price, StringFormat='Price: {0:C}'}" TextAlignment="Left" />
+                            <Separator Height="0" Width="345" />
+                        </StackPanel>
+                    </Button>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        
-        <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1">
+
+        <!--<StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1">
             <Label>Choosen car information:</Label>
             <Label Content="{Binding SelectedCar.Brand, StringFormat='Car brand: {0}'}" />
             <Label Content="{Binding SelectedCar.Type, StringFormat='Car type: {0}'}" />
             <Label Content="{Binding SelectedCar.RegPlate, StringFormat='Registration plate: {0}'}" />
             <Label Content="{Binding SelectedCar.Price, StringFormat='Car price: {0:C}'}" />
-        </StackPanel>
+        </StackPanel>-->
     </Grid>
 </Window>

@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "KoK3k5iziwI=",
+  "dgSpecHash": "qeNlmGwG/c8=",
   "success": true,
   "projectFilePath": "C:\\Users\\least\\Desktop\\5 BCSH2 - Programování v .NET a C#II\\RideWise_semestral\\RideWise\\RideWise\\RideWise.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\least\\.nuget\\packages\\communitytoolkit.mvvm\\8.3.2\\communitytoolkit.mvvm.8.3.2.nupkg.sha512"
+    "C:\\Users\\least\\.nuget\\packages\\communitytoolkit.mvvm\\8.3.2\\communitytoolkit.mvvm.8.3.2.nupkg.sha512",
+    "C:\\Users\\least\\.nuget\\packages\\litedb\\5.0.21\\litedb.5.0.21.nupkg.sha512",
+    "C:\\Users\\least\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512"
   ],
   "logs": []
 }

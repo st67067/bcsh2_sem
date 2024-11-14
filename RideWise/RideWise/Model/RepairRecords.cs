@@ -10,7 +10,7 @@ namespace RideWise.Model
     {
 
         public Car Car { get; set; }
-        public Worker Worker { get; set; }
+        public User User { get; set; }
 
     }
 }
