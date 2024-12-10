@@ -12,6 +12,7 @@ using System.Reflection.Metadata;
 using System.IO;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using RideWise.Database;
 
 namespace RideWise.ViewModel
 {
@@ -43,31 +44,13 @@ namespace RideWise.ViewModel
             CloseCommand = new RelayCommand<Window>(CloseWindow);
             RentRecords = new ObservableCollection<RentRecords>();
 
-            /*Username = LoggedUser.Username;
-            FirstName = LoggedUser.FirstName;
-            LastName = LoggedUser.LastName;
-            Permission = LoggedUser.Permission;*/
-
-            using (var db = new LiteDatabase(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Database" + "rentrecords.db")))
+            var rentCollection = DatabaseManager.Instance.GetCollection<RentRecords>("records");
+            var recordsFromDb = rentCollection.FindAll();
+            RentRecords.Clear();
+            foreach (var record in recordsFromDb)
             {
-                var collection = db.GetCollection<RentRecords>("records");
-
-                collection.DeleteAll();
-                if (collection.Count() == 0)
-                {
-                    collection.Insert(new RentRecords("1ABC123", "james", new DateTime(2024, 5, 10), new DateTime(2024, 5, 13)));
-                    collection.Insert(new RentRecords("1ADA527", "james", new DateTime(2024, 3, 09), new DateTime(2024, 3, 20)));
-                    collection.Insert(new RentRecords("8VWX234", "james", new DateTime(2024, 1, 01), new DateTime(2024, 1, 04)));
-
-                }
-                var recordsFromDv = collection.FindAll();
-
-                RentRecords.Clear();
-                foreach (var record in recordsFromDv)
-                {
-                    RentRecords.Add(record);
-
-                }
+                RentRecords.Add(record);
+                
             }
         }
 

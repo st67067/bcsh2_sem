@@ -23,7 +23,7 @@
             <Label>Permission:</Label>
             <TextBlock Text="{Binding Permission}" Margin="0,5"/>
             <StackPanel Orientation="Horizontal" Margin="10">
-                <Button Content="Change User Info" Width="75" 
+                <Button Content="Change Info" Width="75" 
                     HorizontalAlignment="Center" Margin="10,10,10,0"
                     Click="ChangeInfoButton"/>
                 <Button Content="Close" Width="75" 

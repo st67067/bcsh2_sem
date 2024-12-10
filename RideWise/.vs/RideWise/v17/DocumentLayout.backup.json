@@ -3,40 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\least\\Desktop\\5 BCSH2 - Programov\u00E1n\u00ED v .NET a C#II\\RideWise_semestral\\RideWise\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{49F9FD87-D2D4-480E-80A0-87702AB5A21A}|RideWise\\RideWise.csproj|c:\\users\\least\\desktop\\5 bcsh2 - programov\u00E1n\u00ED v .net a c#ii\\ridewise_semestral\\ridewise\\ridewise\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{49F9FD87-D2D4-480E-80A0-87702AB5A21A}|RideWise\\RideWise.csproj|solutionrelative:ridewise\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49F9FD87-D2D4-480E-80A0-87702AB5A21A}|RideWise\\RideWise.csproj|c:\\users\\least\\desktop\\5 bcsh2 - programov\u00E1n\u00ED v .net a c#ii\\ridewise_semestral\\ridewise\\ridewise\\view\\userinfodialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{49F9FD87-D2D4-480E-80A0-87702AB5A21A}|RideWise\\RideWise.csproj|solutionrelative:ridewise\\view\\userinfodialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49F9FD87-D2D4-480E-80A0-87702AB5A21A}|RideWise\\RideWise.csproj|c:\\users\\least\\desktop\\5 bcsh2 - programov\u00E1n\u00ED v .net a c#ii\\ridewise_semestral\\ridewise\\ridewise\\view\\userinfodialog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49F9FD87-D2D4-480E-80A0-87702AB5A21A}|RideWise\\RideWise.csproj|solutionrelative:ridewise\\view\\userinfodialog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{49F9FD87-D2D4-480E-80A0-87702AB5A21A}|RideWise\\RideWise.csproj|c:\\users\\least\\desktop\\5 bcsh2 - programov\u00E1n\u00ED v .net a c#ii\\ridewise_semestral\\ridewise\\ridewise\\database\\databasemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49F9FD87-D2D4-480E-80A0-87702AB5A21A}|RideWise\\RideWise.csproj|solutionrelative:ridewise\\database\\databasemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{49F9FD87-D2D4-480E-80A0-87702AB5A21A}|RideWise\\RideWise.csproj|c:\\users\\least\\desktop\\5 bcsh2 - programov\u00E1n\u00ED v .net a c#ii\\ridewise_semestral\\ridewise\\ridewise\\viewmodel\\userinfoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{49F9FD87-D2D4-480E-80A0-87702AB5A21A}|RideWise\\RideWise.csproj|solutionrelative:ridewise\\viewmodel\\userinfoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{49F9FD87-D2D4-480E-80A0-87702AB5A21A}|RideWise\\RideWise.csproj|c:\\users\\least\\desktop\\5 bcsh2 - programov\u00E1n\u00ED v .net a c#ii\\ridewise_semestral\\ridewise\\ridewise\\model\\rentrecords.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49F9FD87-D2D4-480E-80A0-87702AB5A21A}|RideWise\\RideWise.csproj|solutionrelative:ridewise\\model\\rentrecords.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49F9FD87-D2D4-480E-80A0-87702AB5A21A}|RideWise\\RideWise.csproj|c:\\users\\least\\desktop\\5 bcsh2 - programov\u00E1n\u00ED v .net a c#ii\\ridewise_semestral\\ridewise\\ridewise\\view\\carinfodialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{49F9FD87-D2D4-480E-80A0-87702AB5A21A}|RideWise\\RideWise.csproj|solutionrelative:ridewise\\view\\carinfodialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{49F9FD87-D2D4-480E-80A0-87702AB5A21A}|RideWise\\RideWise.csproj|c:\\users\\least\\desktop\\5 bcsh2 - programov\u00E1n\u00ED v .net a c#ii\\ridewise_semestral\\ridewise\\ridewise\\view\\userinfodialog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49F9FD87-D2D4-480E-80A0-87702AB5A21A}|RideWise\\RideWise.csproj|solutionrelative:ridewise\\view\\userinfodialog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{49F9FD87-D2D4-480E-80A0-87702AB5A21A}|RideWise\\RideWise.csproj|c:\\users\\least\\desktop\\5 bcsh2 - programov\u00E1n\u00ED v .net a c#ii\\ridewise_semestral\\ridewise\\ridewise\\viewmodel\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{49F9FD87-D2D4-480E-80A0-87702AB5A21A}|RideWise\\RideWise.csproj|solutionrelative:ridewise\\viewmodel\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{49F9FD87-D2D4-480E-80A0-87702AB5A21A}|RideWise\\RideWise.csproj|c:\\users\\least\\desktop\\5 bcsh2 - programov\u00E1n\u00ED v .net a c#ii\\ridewise_semestral\\ridewise\\ridewise\\view\\carinfodialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{49F9FD87-D2D4-480E-80A0-87702AB5A21A}|RideWise\\RideWise.csproj|solutionrelative:ridewise\\view\\carinfodialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{49F9FD87-D2D4-480E-80A0-87702AB5A21A}|RideWise\\RideWise.csproj|c:\\users\\least\\desktop\\5 bcsh2 - programov\u00E1n\u00ED v .net a c#ii\\ridewise_semestral\\ridewise\\ridewise\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{49F9FD87-D2D4-480E-80A0-87702AB5A21A}|RideWise\\RideWise.csproj|solutionrelative:ridewise\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{49F9FD87-D2D4-480E-80A0-87702AB5A21A}|RideWise\\RideWise.csproj|c:\\users\\least\\desktop\\5 bcsh2 - programov\u00E1n\u00ED v .net a c#ii\\ridewise_semestral\\ridewise\\ridewise\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49F9FD87-D2D4-480E-80A0-87702AB5A21A}|RideWise\\RideWise.csproj|solutionrelative:ridewise\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{49F9FD87-D2D4-480E-80A0-87702AB5A21A}|RideWise\\RideWise.csproj|c:\\users\\least\\desktop\\5 bcsh2 - programov\u00E1n\u00ED v .net a c#ii\\ridewise_semestral\\ridewise\\ridewise\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{49F9FD87-D2D4-480E-80A0-87702AB5A21A}|RideWise\\RideWise.csproj|solutionrelative:ridewise\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49F9FD87-D2D4-480E-80A0-87702AB5A21A}|RideWise\\RideWise.csproj|c:\\users\\least\\desktop\\5 bcsh2 - programov\u00E1n\u00ED v .net a c#ii\\ridewise_semestral\\ridewise\\ridewise\\view\\userinfodialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{49F9FD87-D2D4-480E-80A0-87702AB5A21A}|RideWise\\RideWise.csproj|solutionrelative:ridewise\\view\\userinfodialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,13 +54,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
+              "Title": "DatabaseManager.cs",
+              "DocumentMoniker": "C:\\Users\\least\\Desktop\\5 BCSH2 - Programov\u00E1n\u00ED v .NET a C#II\\RideWise_semestral\\RideWise\\RideWise\\Database\\DatabaseManager.cs",
+              "RelativeDocumentMoniker": "RideWise\\Database\\DatabaseManager.cs",
+              "ToolTip": "C:\\Users\\least\\Desktop\\5 BCSH2 - Programov\u00E1n\u00ED v .NET a C#II\\RideWise_semestral\\RideWise\\RideWise\\Database\\DatabaseManager.cs*",
+              "RelativeToolTip": "RideWise\\Database\\DatabaseManager.cs*",
+              "ViewState": "AgIAACAAAAAAAAAAAAAgwDwAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T18:29:46.706Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "LoginViewModel.cs",
               "DocumentMoniker": "C:\\Users\\least\\Desktop\\5 BCSH2 - Programov\u00E1n\u00ED v .NET a C#II\\RideWise_semestral\\RideWise\\RideWise\\ViewModel\\LoginViewModel.cs",
               "RelativeDocumentMoniker": "RideWise\\ViewModel\\LoginViewModel.cs",
               "ToolTip": "C:\\Users\\least\\Desktop\\5 BCSH2 - Programov\u00E1n\u00ED v .NET a C#II\\RideWise_semestral\\RideWise\\RideWise\\ViewModel\\LoginViewModel.cs",
               "RelativeToolTip": "RideWise\\ViewModel\\LoginViewModel.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAC4AAABlAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAqwCMAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-13T22:41:52.831Z",
               "EditorCaption": ""
@@ -72,19 +81,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "RentRecords.cs",
-              "DocumentMoniker": "C:\\Users\\least\\Desktop\\5 BCSH2 - Programov\u00E1n\u00ED v .NET a C#II\\RideWise_semestral\\RideWise\\RideWise\\Model\\RentRecords.cs",
-              "RelativeDocumentMoniker": "RideWise\\Model\\RentRecords.cs",
-              "ToolTip": "C:\\Users\\least\\Desktop\\5 BCSH2 - Programov\u00E1n\u00ED v .NET a C#II\\RideWise_semestral\\RideWise\\RideWise\\Model\\RentRecords.cs",
-              "RelativeToolTip": "RideWise\\Model\\RentRecords.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T22:21:01.241Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "CarInfoDialog.xaml",
               "DocumentMoniker": "C:\\Users\\least\\Desktop\\5 BCSH2 - Programov\u00E1n\u00ED v .NET a C#II\\RideWise_semestral\\RideWise\\RideWise\\View\\CarInfoDialog.xaml",
               "RelativeDocumentMoniker": "RideWise\\View\\CarInfoDialog.xaml",
@@ -96,13 +92,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "UserInfoViewModel.cs",
               "DocumentMoniker": "C:\\Users\\least\\Desktop\\5 BCSH2 - Programov\u00E1n\u00ED v .NET a C#II\\RideWise_semestral\\RideWise\\RideWise\\ViewModel\\UserInfoViewModel.cs",
               "RelativeDocumentMoniker": "RideWise\\ViewModel\\UserInfoViewModel.cs",
-              "ToolTip": "C:\\Users\\least\\Desktop\\5 BCSH2 - Programov\u00E1n\u00ED v .NET a C#II\\RideWise_semestral\\RideWise\\RideWise\\ViewModel\\UserInfoViewModel.cs",
-              "RelativeToolTip": "RideWise\\ViewModel\\UserInfoViewModel.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAAwDsAAABHAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\least\\Desktop\\5 BCSH2 - Programov\u00E1n\u00ED v .NET a C#II\\RideWise_semestral\\RideWise\\RideWise\\ViewModel\\UserInfoViewModel.cs*",
+              "RelativeToolTip": "RideWise\\ViewModel\\UserInfoViewModel.cs*",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAwEsAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-13T18:45:57.423Z",
               "EditorCaption": ""
@@ -115,14 +111,14 @@
               "RelativeDocumentMoniker": "RideWise\\View\\UserInfoDialog.xaml.cs",
               "ToolTip": "C:\\Users\\least\\Desktop\\5 BCSH2 - Programov\u00E1n\u00ED v .NET a C#II\\RideWise_semestral\\RideWise\\RideWise\\View\\UserInfoDialog.xaml.cs",
               "RelativeToolTip": "RideWise\\View\\UserInfoDialog.xaml.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-13T20:35:38.128Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "UserInfoDialog.xaml",
               "DocumentMoniker": "C:\\Users\\least\\Desktop\\5 BCSH2 - Programov\u00E1n\u00ED v .NET a C#II\\RideWise_semestral\\RideWise\\RideWise\\View\\UserInfoDialog.xaml",
               "RelativeDocumentMoniker": "RideWise\\View\\UserInfoDialog.xaml",
@@ -134,33 +130,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\least\\Desktop\\5 BCSH2 - Programov\u00E1n\u00ED v .NET a C#II\\RideWise_semestral\\RideWise\\RideWise\\Model\\User.cs",
-              "RelativeDocumentMoniker": "RideWise\\Model\\User.cs",
-              "ToolTip": "C:\\Users\\least\\Desktop\\5 BCSH2 - Programov\u00E1n\u00ED v .NET a C#II\\RideWise_semestral\\RideWise\\RideWise\\Model\\User.cs",
-              "RelativeToolTip": "RideWise\\Model\\User.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAABvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T14:42:33.562Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "MainViewModel.cs",
               "DocumentMoniker": "C:\\Users\\least\\Desktop\\5 BCSH2 - Programov\u00E1n\u00ED v .NET a C#II\\RideWise_semestral\\RideWise\\RideWise\\ViewModel\\MainViewModel.cs",
               "RelativeDocumentMoniker": "RideWise\\ViewModel\\MainViewModel.cs",
               "ToolTip": "C:\\Users\\least\\Desktop\\5 BCSH2 - Programov\u00E1n\u00ED v .NET a C#II\\RideWise_semestral\\RideWise\\RideWise\\ViewModel\\MainViewModel.cs",
               "RelativeToolTip": "RideWise\\ViewModel\\MainViewModel.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAmwEMAAABQAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADkAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-12T12:14:23.397Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\least\\Desktop\\5 BCSH2 - Programov\u00E1n\u00ED v .NET a C#II\\RideWise_semestral\\RideWise\\RideWise\\MainWindow.xaml",
               "RelativeDocumentMoniker": "RideWise\\MainWindow.xaml",

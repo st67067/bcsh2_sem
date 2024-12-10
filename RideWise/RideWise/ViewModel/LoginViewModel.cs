@@ -10,6 +10,7 @@ using System.Windows;
 using LiteDB;
 using RideWise.Model;
 using System.IO;
+using RideWise.Database;
 
 namespace RideWise.ViewModel
 {
@@ -34,31 +35,19 @@ namespace RideWise.ViewModel
 
         private void ExecuteLogin(object parameter)
         {
-            using (var db = new LiteDatabase(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Database" + "users.db")))
+            
+            var userCollection = DatabaseManager.Instance.GetCollection<User>("users");
+            var user = userCollection.FindOne(u => u.Username == Username && u.Password == Password);
+            if (user != null)
             {
-                var collection = db.GetCollection<User>("users");
-
-                /*collection.DeleteAll();
-                if (collection.Count() == 0)
-                {
-                    collection.Insert(new User("oliver", "123", "Oliver", "Harrison", Permission.Admin));
-                    collection.Insert(new User("emily", "123", "Emily", "Carter", Permission.Worker));
-                    collection.Insert(new User("james", "123", "James", "Mitchell", Permission.None));
-                    collection.Insert(new User("sarah", "123", "Sarah", "Bennett", Permission.None));
-                }*/
-
-                var user = collection.FindOne(u => u.Username == Username && u.Password == Password);
-                if (user != null)
-                {
-                    //MessageBox.Show("Login successful!", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
-                    LoggedAccount = user;
-                    ((Window)parameter).DialogResult = true;
-                }
-                else
-                {
-                    MessageBox.Show("Invalid username or password.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                    //MessageBox.Show(Username + " " + Password, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
+                //MessageBox.Show("Login successful!", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+                LoggedAccount = user;
+                ((Window)parameter).DialogResult = true;
+            }
+            else
+            {
+                MessageBox.Show("Invalid username or password.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                //MessageBox.Show(Username + " " + Password, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
         }

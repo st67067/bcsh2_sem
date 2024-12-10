@@ -5,6 +5,8 @@ using System.Windows;
 using System.Windows.Input;
 using CommunityToolkit.Mvvm.Input;
 using LiteDB;
+using Microsoft.VisualBasic;
+using RideWise.Database;
 using RideWise.Model;
 using RideWise.View;
 
@@ -51,37 +53,15 @@ namespace RideWise.ViewModel
             ShowUserInfoCommand = new RelayCommand(ShowUserInfo);
             ShowCarDetailsCommand = new RelayCommand<Car>(ShowCarDetails);
 
-            using (var db = new LiteDatabase(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Database" + "cars.db")))
+            
+            var carCollection = DatabaseManager.Instance.GetCollection<Car>("cars");
+            var carsFromDb = carCollection.FindAll();
+
+            Cars.Clear();
+            foreach (var car in carsFromDb)
             {
-                var collection = db.GetCollection<Car>("cars");
-
-                /*collection.DeleteAll();
-                if (collection.Count() == 0)
-                {
-                    collection.Insert(new Car(CarBrand.Toyota, "Corolla", "1ABC123", 15000));
-                    collection.Insert(new Car(CarBrand.BMW, "X5", "3GHI789", 30000));
-                    collection.Insert(new Car(CarBrand.Audi, "A1", "1ADA527", 15000));
-                    collection.Insert(new Car(CarBrand.Audi, "A4", "4JKL012", 20000));
-                    collection.Insert(new Car(CarBrand.MercedesBenz, "C-Class", "5MNO345", 35000));
-                    collection.Insert(new Car(CarBrand.Volkswagen, "Golf", "6PQR678", 18000));
-                    collection.Insert(new Car(CarBrand.Volvo, "XC90", "7STU901", 40000));
-                    collection.Insert(new Car(CarBrand.BMW, "3 Series", "8VWX234", 28000));
-                    collection.Insert(new Car(CarBrand.Audi, "Q5", "9YZA567", 32000));
-                    collection.Insert(new Car(CarBrand.Toyota, "Camry", "1BCD890", 22000));
-                    collection.Insert(new Car(CarBrand.Volkswagen, "Passat", "2EFG123", 25000));
-                    collection.Insert(new Car(CarBrand.Volvo, "S60", "3HIJ456", 29000));
-                    collection.Insert(new Car(CarBrand.MercedesBenz, "E-Class", "4KLM789", 45000));
-                    collection.Insert(new Car(CarBrand.BMW, "X3", "5NOP012", 31000));
-                }*/
-                var carsFromDb = collection.FindAll();
-
-                Cars.Clear();
-                foreach (var car in carsFromDb)
-                {
-                    Cars.Add(car);
-                }
+                Cars.Add(car);
             }
-                
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
