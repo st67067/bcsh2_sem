@@ -6,11 +6,18 @@ using System.Threading.Tasks;
 
 namespace RideWise.Model
 {
-    class RepairRecords
+    public class RepairRecords
     {
 
-        public Car Car { get; set; }
-        public User User { get; set; }
+        public string CarPlate { get; set; }
+        public string Username { get; set; }
+        public string? Info { get; set; }
 
+        public RepairRecords(string carPlate, string username, string? info)
+        {
+            CarPlate = carPlate;
+            Username = username;
+            Info = info;
+        }
     }
 }

@@ -23,9 +23,9 @@
             <Label>Permission:</Label>
             <TextBlock Text="{Binding Permission}" Margin="0,5"/>
             <StackPanel Orientation="Horizontal" Margin="10">
-                <Button Content="Change Info" Width="75" 
+                <!--<Button Content="Change Info" Width="75" 
                     HorizontalAlignment="Center" Margin="10,10,10,0"
-                    Click="ChangeInfoButton"/>
+                    Click="ChangeInfoButton"/> -->
                 <Button Content="Close" Width="75" 
                         HorizontalAlignment="Center" Margin="10,10,10,0"
                     Click="CancelButton_Click"/>
@@ -41,6 +41,7 @@
                             <TextBlock Text="{Binding Username, StringFormat='Username: {0}'}" TextAlignment="Left" />
                             <TextBlock Text="{Binding StartTime, StringFormat='StartTime: {0:MM/dd/yyyy}'}" TextAlignment="Left" />
                             <TextBlock Text="{Binding EndTime, StringFormat='EndTime: {0:MM/dd/yyyy}'}" TextAlignment="Left" />
+                            <TextBlock Text="{Binding Info, StringFormat='Additional Info: {0}'}" TextAlignment="Left" />
                             <Separator Height="1" Width="345" />
                         </StackPanel>
                     </DataTemplate>

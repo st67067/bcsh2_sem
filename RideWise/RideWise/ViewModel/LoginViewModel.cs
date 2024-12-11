@@ -37,8 +37,8 @@ namespace RideWise.ViewModel
         {
             
             var userCollection = DatabaseManager.Instance.GetCollection<User>("users");
-            var user = userCollection.FindOne(u => u.Username == Username && u.Password == Password);
-            if (user != null)
+            var user = userCollection.FindOne(u => u.Username == Username);
+            if (user != null && PasswordHelper.VerifyPassword(Password, user.Password))
             {
                 //MessageBox.Show("Login successful!", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
                 LoggedAccount = user;

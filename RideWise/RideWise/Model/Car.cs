@@ -24,6 +24,7 @@ namespace RideWise.Model
                 OnPropertyChanged(nameof(Price));
             }
         }
+        public string? ImagePath { get; set; }
 
 
         public Car(CarBrand brand, string type, string regPlate, int price)
@@ -32,6 +33,15 @@ namespace RideWise.Model
             Type = type;
             RegPlate = regPlate;
             Price = price;
+        }
+
+        public Car(CarBrand brand, string type, string regPlate, int price, string imagePath)
+        {
+            Brand = brand;
+            Type = type;
+            RegPlate = regPlate;
+            Price = price;
+            ImagePath = imagePath;
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;

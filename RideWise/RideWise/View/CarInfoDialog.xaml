@@ -5,44 +5,54 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RideWise.View"
         mc:Ignorable="d"
-        Title="CarInfo" Height="450" Width="800">
-    
-    <Grid Margin="10">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
+        Title="CarInfo" Height="450" Width="737">
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        
-        <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding Brand, StringFormat='Brand: {0}'}" FontWeight="Bold" FontSize="14"/>
-        <TextBlock Grid.Row="1" Grid.Column="0" Text="{Binding Type, StringFormat='Model: {0}'}" FontSize="12"/>
-        <TextBlock Grid.Row="2" Grid.Column="0" Text="{Binding Price, StringFormat='Price: {0:C}'}" FontSize="12"/>
+    <StackPanel Margin="10" Orientation="Horizontal">
+        <!-- První Grid -->
+        <Grid Margin="10" Width="300">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
 
-        <Label Grid.Row="0" Grid.Column="1">Rent:</Label>
-        <Label Grid.Row="1" Grid.Column="1">Starting Date:</Label>
-        <DatePicker Grid.Row="2" Grid.Column="1"></DatePicker>
-        <Label Grid.Row="3" Grid.Column="1">Ending Date:</Label>
-        <DatePicker Grid.Row="4" Grid.Column="1"></DatePicker>
-        <Label Grid.Row="5" Grid.Column="1">Additional Information:</Label>
-        <TextBox Grid.Row="6" Grid.Column="1"></TextBox>
+            <TextBlock Grid.Row="0" Text="{Binding Brand, StringFormat='Brand: {0}'}" FontWeight="Bold" FontSize="14"/>
+            <TextBlock Grid.Row="1" Text="{Binding Type, StringFormat='Model: {0}'}" FontSize="12"/>
+            <TextBlock Grid.Row="2" Text="{Binding Price, StringFormat='Price: {0:C}'}" FontSize="12"/>
+            <Image Grid.Row="3" Source="{Binding ImagePath}" Width="200" Height="200" HorizontalAlignment="Center" />
+        </Grid>
 
-        <StackPanel Grid.Row="8" Grid.Column="1" VerticalAlignment="Center"
-                    Orientation="Horizontal">
-            <Button Margin="10" Width="150">Ok</Button>
-            <Button Margin="10" Width="150">Cancel</Button>
-        </StackPanel>
-    </Grid>
+        <!-- Druhý Grid -->
+        <Grid Margin="10" Width="300">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
 
-    
+            <Label Grid.Row="0">Rent:</Label>
+            <Label Grid.Row="1">Starting Date:</Label>
+            <DatePicker Grid.Row="2" SelectedDate="{Binding StartDate, Mode=TwoWay}"/>
+            <Label Grid.Row="3">Ending Date:</Label>
+            <DatePicker Grid.Row="4" SelectedDate="{Binding EndDate, Mode=TwoWay}"/>
+            <Label Grid.Row="5">Additional Information:</Label>
+            <TextBox Grid.Row="6" Text="{Binding AdditionalInfo, Mode=TwoWay}" />
+
+            <StackPanel Grid.Row="8" HorizontalAlignment="Center" 
+                        VerticalAlignment="Center" Orientation="Horizontal" 
+                        Margin="0 50 0 0">
+                <Button Margin="10" Width="125" Command="{Binding OkCommand}" CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}">Ok</Button>
+                <Button Margin="10" Width="125" Content="Cancel" IsCancel="True" />
+            </StackPanel>
+        </Grid>
+    </StackPanel>
+
+
+
 </Window>

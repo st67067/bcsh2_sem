@@ -1,6 +1,8 @@
 ﻿using System.Configuration;
 using System.Data;
 using System.Windows;
+using RideWise.Model;
+
 
 namespace RideWise
 {

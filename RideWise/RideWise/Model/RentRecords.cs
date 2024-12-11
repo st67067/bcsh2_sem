@@ -11,10 +11,28 @@ namespace RideWise.Model
 
         public string CarPlate { get; set; }
         public string Username { get; set; }
-        public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
+        public DateTime? StartTime { get; set; }
+        public DateTime? EndTime { get; set; }
+        public string? Info { get; set; }
 
         public RentRecords() { }
+        public RentRecords(string car, string user, DateTime? startTime, DateTime? endTime, string? info)
+        {
+            CarPlate = car;
+            Username = user;
+            StartTime = startTime;
+            EndTime = endTime;
+            Info = info;
+        }
+
+        public RentRecords(string car, string user, DateTime startTime, DateTime endTime, string info)
+        {
+            CarPlate = car;
+            Username = user;
+            StartTime = startTime;
+            EndTime = endTime;
+            Info = info;
+        }
 
         public RentRecords(string car, string user, DateTime startTime, DateTime endTime)
         {

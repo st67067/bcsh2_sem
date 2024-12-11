@@ -29,13 +29,29 @@ namespace RideWise.ViewModel
                 }
             }
         }
+        private bool _higherPermissions;
+        public bool HigherPermissions
+        {
+            get => _higherPermissions;
+            set
+            {
+                if (_higherPermissions != value)
+                {
+                    _higherPermissions = value;
+                    OnPropertyChanged(nameof(HigherPermissions));
+                }
+            }
+        }
 
         public ObservableCollection<Car> Cars { get; set; } = new ObservableCollection<Car>();
         private Car _selectedCar;
+        public ObservableCollection<RepairRecords> Repairs { get; set; } = new ObservableCollection<RepairRecords>();
 
         public ICommand LoginCommand { get; }
         public ICommand ShowUserInfoCommand { get; }
         public ICommand ShowCarDetailsCommand { get; }
+        public ICommand LogOutCommand { get; }
+        public ICommand SignUpCommand { get; }
 
         public Car SelectedCar
         {
@@ -52,8 +68,10 @@ namespace RideWise.ViewModel
             LoginCommand = new RelayCommand(OpenLoginWindow);
             ShowUserInfoCommand = new RelayCommand(ShowUserInfo);
             ShowCarDetailsCommand = new RelayCommand<Car>(ShowCarDetails);
+            LogOutCommand = new RelayCommand<Car>(LogOut);
+            SignUpCommand = new RelayCommand(SignUp);
 
-            
+
             var carCollection = DatabaseManager.Instance.GetCollection<Car>("cars");
             var carsFromDb = carCollection.FindAll();
 
@@ -62,6 +80,29 @@ namespace RideWise.ViewModel
             {
                 Cars.Add(car);
             }
+
+            var repairCollection = DatabaseManager.Instance.GetCollection<RepairRecords>("repairs");
+            var repairsFromDb = repairCollection.FindAll();
+
+            Repairs.Clear();
+            foreach (var repair in repairsFromDb)
+            {
+                Repairs.Add(repair);
+            }
+        }
+
+        private void SignUp(object obj)
+        {
+            var signUpWindow = new SignUpWindow();
+            signUpWindow.ShowDialog();
+        }
+
+        private void LogOut(Car? car)
+        {
+            IsLoggedIn = false;
+            UserSession.Instance.IsLoggedIn = false;
+            UserSession.Instance.LoggedUser = null;
+            HigherPermissions = false;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -79,9 +120,15 @@ namespace RideWise.ViewModel
             if (result == true && loginViewModel != null)
             {
                 // Načtení výsledku přihlášení z ViewModelu
+                UserSession.Instance.IsLoggedIn = true;
+                UserSession.Instance.LoggedUser = loginViewModel.LoggedAccount;
                 IsLoggedIn = true;
                 loggedUser = loginViewModel.LoggedAccount;
-                //MessageBox.Show(loggedUser.ToString());
+                //MessageBox.Show(UserSession.Instance.IsLoggedIn.ToString());
+                if (!UserSession.Instance.LoggedUser.Permission.Equals(Permission.None))
+                {
+                    HigherPermissions = true;
+                }
             }
         }
 
@@ -90,10 +137,10 @@ namespace RideWise.ViewModel
             var userInfoViewModel = new UserInfoViewModel
             {
                 //LoggedUser = loggedUser
-                Username = loggedUser.Username,
-                FirstName = loggedUser.FirstName,
-                LastName = loggedUser.LastName,
-                Permission = loggedUser.Permission,
+                Username = UserSession.Instance.LoggedUser.Username,
+                FirstName = UserSession.Instance.LoggedUser.FirstName,
+                LastName = UserSession.Instance.LoggedUser.LastName,
+                Permission = UserSession.Instance.LoggedUser.Permission,
             };
 
             var userInfoDialog = new UserInfoDialog

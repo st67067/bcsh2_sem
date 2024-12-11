@@ -12,6 +12,7 @@
         <viewModel:MainViewModel />
     </Window.DataContext>
     
+    
 
     <Grid Margin="10">
         <Grid.RowDefinitions>
@@ -25,9 +26,25 @@
         </Grid.ColumnDefinitions>
 
         <Label>Choose a car</Label>
-        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" 
+                    HorizontalAlignment="Right" Margin="5,0,0,0">
             <!-- Login Button -->
             <Button Content="Login" Command="{Binding LoginCommand}" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Visibility" Value="Visible"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding IsLoggedIn}" Value="True">
+                                <Setter Property="Visibility" Value="Collapsed"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+            <!-- SignUp Button -->
+            <Button Content="SignUp" Command="{Binding SignUpCommand}" Grid.Row="0" Grid.Column="1" 
+                    HorizontalAlignment="Right" Margin="5,0,0,0">
                 <Button.Style>
                     <Style TargetType="Button">
                         <Setter Property="Visibility" Value="Visible"/>
@@ -68,7 +85,23 @@
                     </Style>
                 </Button.Style>
             </Button>
+
+            <!-- Log Out Button -->
+            <Button Content="Log Out" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" Margin="5,0,0,0"
+                Command="{Binding LogOutCommand}">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Visibility" Value="Collapsed"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding IsLoggedIn}" Value="True">
+                                <Setter Property="Visibility" Value="Visible"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
         </StackPanel>
+
 
 
         <ListBox Grid.Row="1" ItemsSource="{Binding Cars}" SelectedItem="{Binding SelectedCar}" 
@@ -90,12 +123,33 @@
             </ListBox.ItemTemplate>
         </ListBox>
 
-        <!--<StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1">
-            <Label>Choosen car information:</Label>
-            <Label Content="{Binding SelectedCar.Brand, StringFormat='Car brand: {0}'}" />
-            <Label Content="{Binding SelectedCar.Type, StringFormat='Car type: {0}'}" />
-            <Label Content="{Binding SelectedCar.RegPlate, StringFormat='Registration plate: {0}'}" />
-            <Label Content="{Binding SelectedCar.Price, StringFormat='Car price: {0:C}'}" />
-        </StackPanel>-->
+        <ListBox Grid.Row="1" Grid.Column="1" ItemsSource="{Binding Repairs}" 
+         HorizontalContentAlignment="Stretch">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding DataContext.HigherPermissions, RelativeSource={RelativeSource AncestorType=ListBox}}" Value="True">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ListBox.ItemContainerStyle>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Button 
+                    Background="Transparent" BorderThickness="0"
+                    HorizontalAlignment="Stretch">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="{Binding CarPlate, StringFormat='CarPlate: {0}'}" TextAlignment="Left" />
+                            <TextBlock Text="{Binding Username, StringFormat='Username: {0}'}" TextAlignment="Left" />
+                            <TextBlock Text="{Binding Info, StringFormat='Info: {0:C}'}" TextAlignment="Left" />
+                            <Separator Height="0" Width="345" />
+                        </StackPanel>
+                    </Button>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
     </Grid>
 </Window>

@@ -23,6 +23,7 @@ namespace RideWise.ViewModel
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public Permission Permission { get; set; }
+        public string Info { get; set; }
 
         public ICommand CloseCommand { get; }
 
@@ -49,7 +50,18 @@ namespace RideWise.ViewModel
             RentRecords.Clear();
             foreach (var record in recordsFromDb)
             {
-                RentRecords.Add(record);
+                if (UserSession.Instance.LoggedUser.Permission.Equals(Permission.None)) // user - show only persons records
+                {
+                    if (UserSession.Instance.LoggedUser.Username.Equals(record.Username))
+                    {
+                        RentRecords.Add(record);
+                    }
+                }
+                else // for worker and admin show all records
+                {
+                    RentRecords.Add(record);
+                }
+                
                 
             }
         }
