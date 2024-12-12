@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RideWise")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e7f0bb04a59140d83418a503077af61d265cf05b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e020f27bd0dd40944a58a9260d96e1439cb6d6ab")]
 [assembly: System.Reflection.AssemblyProductAttribute("RideWise")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RideWise")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

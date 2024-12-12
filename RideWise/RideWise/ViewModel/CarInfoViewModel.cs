@@ -77,7 +77,7 @@ namespace RideWise.ViewModel
         {
             if (UserSession.Instance.LoggedUser == null)
             {
-                MessageBox.Show("You need to login to make a reservation.");
+                MessageBox.Show("You need to login to make a reservation.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else 
             {
@@ -86,13 +86,13 @@ namespace RideWise.ViewModel
 
                 if (StartDate == null || EndDate == null)
                 {
-                    MessageBox.Show("Both start and end dates must be provided.");
+                    MessageBox.Show("Both start and end dates must be provided.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
 
                 if (StartDate >= EndDate)
                 {
-                    MessageBox.Show("Start date must be earlier than end date.");
+                    MessageBox.Show("Start date must be earlier than end date.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
 
@@ -103,12 +103,12 @@ namespace RideWise.ViewModel
 
                 if (overlappingReservation != null)
                 {
-                    MessageBox.Show("This vehicle is already reserved during the selected period.");
+                    MessageBox.Show("This vehicle is already reserved during the selected period.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
 
                 rentCollection.Insert(new RentRecords(Plate, UserSession.Instance.LoggedUser.Username, StartDate, EndDate, AdditionalInfo));
-                MessageBox.Show("Reservation completed!");
+                MessageBox.Show("Reservation completed!", "Success!", MessageBoxButton.OK, MessageBoxImage.Information);
 
 
                 window.Close();

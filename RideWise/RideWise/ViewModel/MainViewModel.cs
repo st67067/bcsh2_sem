@@ -52,6 +52,7 @@ namespace RideWise.ViewModel
         public ICommand ShowCarDetailsCommand { get; }
         public ICommand LogOutCommand { get; }
         public ICommand SignUpCommand { get; }
+        public ICommand RepairCommand { get; }
 
         public Car SelectedCar
         {
@@ -70,6 +71,7 @@ namespace RideWise.ViewModel
             ShowCarDetailsCommand = new RelayCommand<Car>(ShowCarDetails);
             LogOutCommand = new RelayCommand<Car>(LogOut);
             SignUpCommand = new RelayCommand(SignUp);
+            RepairCommand = new RelayCommand(AddRepairRecord);
 
 
             var carCollection = DatabaseManager.Instance.GetCollection<Car>("cars");
@@ -84,6 +86,19 @@ namespace RideWise.ViewModel
             var repairCollection = DatabaseManager.Instance.GetCollection<RepairRecords>("repairs");
             var repairsFromDb = repairCollection.FindAll();
 
+            Repairs.Clear();
+            foreach (var repair in repairsFromDb)
+            {
+                Repairs.Add(repair);
+            }
+        }
+
+        private void AddRepairRecord(object obj)
+        {
+            var repairWindow = new AddRepairRecordWindow();
+            repairWindow.ShowDialog();
+            var repairCollection = DatabaseManager.Instance.GetCollection<RepairRecords>("repairs");
+            var repairsFromDb = repairCollection.FindAll();
             Repairs.Clear();
             foreach (var repair in repairsFromDb)
             {

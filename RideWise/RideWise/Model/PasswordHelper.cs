@@ -15,13 +15,13 @@ namespace RideWise.Model
             using (var deriveBytes = new Rfc2898DeriveBytes(password, 16, 10000))
             {
                 var salt = deriveBytes.Salt;
-                var hash = deriveBytes.GetBytes(32); // 32-byte hash
+                var hash = deriveBytes.GetBytes(32);
 
                 var result = new byte[salt.Length + hash.Length];
                 Buffer.BlockCopy(salt, 0, result, 0, salt.Length);
                 Buffer.BlockCopy(hash, 0, result, salt.Length, hash.Length);
 
-                return Convert.ToBase64String(result); // Uložení kombinace salt + hash
+                return Convert.ToBase64String(result);
             }
         }
 

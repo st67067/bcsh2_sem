@@ -52,9 +52,9 @@ namespace RideWise.Database
             userCollection.DeleteAll();
             if (userCollection.Count() == 0)
             {
-                userCollection.Insert(new User("o", PasswordHelper.HashPassword("123"), "Oliver", "Harrison", Permission.Admin));
+                userCollection.Insert(new User("admin", PasswordHelper.HashPassword("123"), "Oliver", "Harrison", Permission.Admin));
                 userCollection.Insert(new User("emily", PasswordHelper.HashPassword("123"), "Emily", "Carter", Permission.Worker));
-                userCollection.Insert(new User("james", PasswordHelper.HashPassword("123"), "James", "Mitchell", Permission.None));
+                userCollection.Insert(new User("james", PasswordHelper.HashPassword("123"), "James", "Mitchell", Permission.Worker));
                 userCollection.Insert(new User("sarah", PasswordHelper.HashPassword("123"), "Sarah", "Bennett", Permission.None));
             }
 
@@ -76,9 +76,9 @@ namespace RideWise.Database
             repairCollection.DeleteAll();
             if (repairCollection.Count() == 0)
             {
-                repairCollection.Insert(new RepairRecords("1ABC123", "james", "Ok"));
-                repairCollection.Insert(new RepairRecords("1ADA527", "james", "All good"));
-                repairCollection.Insert(new RepairRecords("8VWX234", "sarah", "Cleaned "));
+                repairCollection.Insert(new RepairRecords("1ABC123", "emily", "Ok"));
+                repairCollection.Insert(new RepairRecords("1ADA527", "emily", "All good"));
+                repairCollection.Insert(new RepairRecords("8VWX234", "james", "Cleaned "));
 
             }
         }

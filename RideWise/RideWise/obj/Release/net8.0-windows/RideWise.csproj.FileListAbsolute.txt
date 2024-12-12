@@ -33,3 +33,5 @@ C:\Users\least\Desktop\5 BCSH2 - Programování v .NET a C#II\RideWise_semestral
 C:\Users\least\Desktop\5 BCSH2 - Programování v .NET a C#II\RideWise_semestral\RideWise\RideWise\obj\Release\net8.0-windows\RideWise.pdb
 C:\Users\least\Desktop\5 BCSH2 - Programování v .NET a C#II\RideWise_semestral\RideWise\RideWise\obj\Release\net8.0-windows\RideWise.genruntimeconfig.cache
 C:\Users\least\Desktop\5 BCSH2 - Programování v .NET a C#II\RideWise_semestral\RideWise\RideWise\obj\Release\net8.0-windows\ref\RideWise.dll
+C:\Users\least\Desktop\5 BCSH2 - Programování v .NET a C#II\RideWise_semestral\RideWise\RideWise\obj\Release\net8.0-windows\View\AddRepairRecordWindow.g.cs
+C:\Users\least\Desktop\5 BCSH2 - Programování v .NET a C#II\RideWise_semestral\RideWise\RideWise\obj\Release\net8.0-windows\View\AddRepairRecordWindow.baml
